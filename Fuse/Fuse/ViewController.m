@@ -26,7 +26,6 @@ NSDictionary *jsonObject;
    
 }
 -(void)textFieldDidChange :(UITextField *)theTextField{
-    NSLog( @"text changed: %@", theTextField.text);
     self.homepagetextfield.backgroundColor = [UIColor whiteColor];
 }
 

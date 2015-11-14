@@ -23,6 +23,8 @@ NSDictionary *jsonObject;
     [self.homepagetextfield addTarget:self
                                action:@selector(textFieldDidChange:)
                      forControlEvents:UIControlEventEditingChanged];
+    
+    
    
 }
 -(void)textFieldDidChange :(UITextField *)theTextField{
@@ -48,6 +50,8 @@ NSDictionary *jsonObject;
         
         [self makeTheCall:URLToCall];
     }
+    textField.resignFirstResponder;
+    
     
     return YES;
 }
@@ -118,6 +122,9 @@ NSDictionary *jsonObject;
     NSString *URLToCall = [@"https://" stringByAppendingString:[companyName stringByAppendingString:jsonURL]];
     
     return URLToCall;
+    
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
 }
 
